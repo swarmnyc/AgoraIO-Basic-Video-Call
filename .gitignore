@@ -12,3 +12,8 @@ cscope.out
 cscope.po.out
 tags
 
+# Other
+**/xcuserdata/
+**/Pods/
+.idea/
+

@@ -41,11 +41,13 @@ class VideoChatViewController: UIViewController {
     }
 
     func setupVideo() {
+        agoraKit.setChannelProfile(.liveBroadcasting)
         agoraKit.enableVideo()  // Default mode is disableVideo
+        agoraKit.setClientRole(.audience)
         agoraKit.setVideoEncoderConfiguration(AgoraVideoEncoderConfiguration(size: AgoraVideoDimension640x360,
                                                                              frameRate: .fps15,
                                                                              bitrate: AgoraVideoBitrateStandard,
-                                                                             orientationMode: .adaptative))
+                                                                             orientationMode: .adaptative))        
     }
     
     func setupLocalVideo() {
@@ -58,8 +60,9 @@ class VideoChatViewController: UIViewController {
     
     func joinChannel() {
         agoraKit.setDefaultAudioRouteToSpeakerphone(true)
-        agoraKit.joinChannel(byToken: nil, channelId: "demoChannel1", info:nil, uid:0) {(sid, uid, elapsed) -> Void in
+        agoraKit.joinChannel(byToken: nil, channelId: "ar-core", info:nil, uid:2) {(sid, uid, elapsed) -> Void in
             // Did join channel "demoChannel1"
+            print("Did join channel:", sid, uid)
         }
         
         UIApplication.shared.isIdleTimerDisabled = true
@@ -149,3 +152,15 @@ extension VideoChatViewController: AgoraRtcEngineDelegate {
         remoteVideoMutedIndicator.isHidden = !muted
     }
 }
+
+//extension VideoChatViewController: AgoraVideoDataPluginDelegate {
+//    
+//    func mediaDataPlugin(_ mediaDataPlugin: AgoraMediaDataPlugin!, didCapturedVideoRawData videoRawData: AgoraVideoRawData!) -> AgoraVideoRawData! {
+//        return videoRawData
+//    }
+//    
+//    func mediaDataPlugin(_ mediaDataPlugin: AgoraMediaDataPlugin!, willRenderVideoRawData videoRawData: AgoraVideoRawData!) -> AgoraVideoRawData! {
+//        return videoRawData
+//    }
+//    
+//}

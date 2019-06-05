@@ -18,6 +18,7 @@ class VideoChatViewController: UIViewController {
     @IBOutlet weak var localVideoMutedIndicator: UIImageView!
 
     var agoraKit: AgoraRtcEngineKit!
+    var agoraMediaDataPlugin: AgoraMediaDataPlugin?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +28,8 @@ class VideoChatViewController: UIViewController {
         hideVideoMuted()
         initializeAgoraEngine()
         setupVideo()
-        setupLocalVideo()
+        setupPlugIn()
+//        setupLocalVideo()
         joinChannel()
     }
 
@@ -48,6 +50,12 @@ class VideoChatViewController: UIViewController {
                                                                              frameRate: .fps15,
                                                                              bitrate: AgoraVideoBitrateStandard,
                                                                              orientationMode: .adaptative))        
+    }
+    
+    // MARK: for videodatamediapugin
+    func setupPlugIn() {
+        self.agoraMediaDataPlugin = AgoraMediaDataPlugin(agoraKit: agoraKit)
+        self.agoraMediaDataPlugin?.videoDelegate = self
     }
     
     func setupLocalVideo() {
@@ -153,14 +161,16 @@ extension VideoChatViewController: AgoraRtcEngineDelegate {
     }
 }
 
-//extension VideoChatViewController: AgoraVideoDataPluginDelegate {
-//    
-//    func mediaDataPlugin(_ mediaDataPlugin: AgoraMediaDataPlugin!, didCapturedVideoRawData videoRawData: AgoraVideoRawData!) -> AgoraVideoRawData! {
-//        return videoRawData
-//    }
-//    
-//    func mediaDataPlugin(_ mediaDataPlugin: AgoraMediaDataPlugin!, willRenderVideoRawData videoRawData: AgoraVideoRawData!) -> AgoraVideoRawData! {
-//        return videoRawData
-//    }
-//    
-//}
+extension VideoChatViewController: AgoraVideoDataPluginDelegate {
+    
+    func mediaDataPlugin(_ mediaDataPlugin: AgoraMediaDataPlugin!, didCapturedVideoRawData videoRawData: AgoraVideoRawData!) -> AgoraVideoRawData! {
+        print("mediaDataPlugin.didCapturedVideoRawData")
+        return videoRawData
+    }
+    
+    func mediaDataPlugin(_ mediaDataPlugin: AgoraMediaDataPlugin!, willRenderVideoRawData videoRawData: AgoraVideoRawData!) -> AgoraVideoRawData! {
+        print("mediaDataPlugin.willRenderVideoRawData")
+        return videoRawData
+    }
+    
+}

@@ -21,6 +21,7 @@
 		389D99A3218825DB00BFD852 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 389D99A2218825DB00BFD852 /* SystemConfiguration.framework */; };
 		389D99A5218825EC00BFD852 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 389D99A4218825EC00BFD852 /* CoreTelephony.framework */; };
 		38D619302250B7AB004A6C87 /* CoreML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38D6192F2250B7AB004A6C87 /* CoreML.framework */; };
+		A8184FB3F0C2CAD7638E611C /* Pods_Agora_iOS_Tutorial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 598B636FA8A64F438F92DFF9 /* Pods_Agora_iOS_Tutorial.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 				389D999F218825C300BFD852 /* libresolv.9.tbd in Frameworks */,
 				389D99A3218825DB00BFD852 /* SystemConfiguration.framework in Frameworks */,
 				389D999D218825BE00BFD852 /* VideoToolbox.framework in Frameworks */,
+				A8184FB3F0C2CAD7638E611C /* Pods_Agora_iOS_Tutorial.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

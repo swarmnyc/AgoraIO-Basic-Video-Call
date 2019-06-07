@@ -16,6 +16,14 @@
 		2B6C747222A6FC6100766B85 /* AgoraVideoRawData.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B6C746C22A6FC6100766B85 /* AgoraVideoRawData.m */; };
 		2B6C747322A6FC6100766B85 /* AgoraAudioRawData.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B6C746E22A6FC6100766B85 /* AgoraAudioRawData.m */; };
 		2B6C747422A6FC6100766B85 /* AgoraMediaDataPlugin.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2B6C747122A6FC6100766B85 /* AgoraMediaDataPlugin.mm */; };
+		2B6C747722A8505D00766B85 /* ModelDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6C747622A8505D00766B85 /* ModelDataHandler.swift */; };
+		2B6C747B22A8518A00766B85 /* TfliteWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2B6C747922A8518A00766B85 /* TfliteWrapper.mm */; };
+		2B6C747D22A8524200766B85 /* CVPixelBufferExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6C747C22A8524200766B85 /* CVPixelBufferExtension.swift */; };
+		2B6C747F22A8527C00766B85 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6C747E22A8527C00766B85 /* UIColorExtension.swift */; };
+		2B6C748322A8553000766B85 /* labelmap.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2B6C748122A8553000766B85 /* labelmap.txt */; };
+		2B6C748422A8553000766B85 /* detect.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 2B6C748222A8553000766B85 /* detect.tflite */; };
+		2B6C748622A85E1F00766B85 /* OverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6C748522A85E1F00766B85 /* OverlayView.swift */; };
+		2B6C748822A85F0700766B85 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6C748722A85F0600766B85 /* StringExtension.swift */; };
 		389D999B218825B200BFD852 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 389D999A218825B200BFD852 /* Accelerate.framework */; };
 		389D999D218825BE00BFD852 /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 389D999C218825BE00BFD852 /* VideoToolbox.framework */; };
 		389D999F218825C300BFD852 /* libresolv.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 389D999E218825C300BFD852 /* libresolv.9.tbd */; };
@@ -23,6 +31,7 @@
 		389D99A3218825DB00BFD852 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 389D99A2218825DB00BFD852 /* SystemConfiguration.framework */; };
 		389D99A5218825EC00BFD852 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 389D99A4218825EC00BFD852 /* CoreTelephony.framework */; };
 		38D619302250B7AB004A6C87 /* CoreML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38D6192F2250B7AB004A6C87 /* CoreML.framework */; };
+		B53F0A16B9998F2B5B271E98 /* Pods_Agora_iOS_Tutorial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 598B636FA8A64F438F92DFF9 /* Pods_Agora_iOS_Tutorial.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +52,16 @@
 		2B6C746F22A6FC6100766B85 /* AgoraAudioRawData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AgoraAudioRawData.h; path = "raw-data-api-oc/AgoraAudioRawData.h"; sourceTree = "<group>"; };
 		2B6C747022A6FC6100766B85 /* AgoraMediaDataPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AgoraMediaDataPlugin.h; path = "raw-data-api-oc/AgoraMediaDataPlugin.h"; sourceTree = "<group>"; };
 		2B6C747122A6FC6100766B85 /* AgoraMediaDataPlugin.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AgoraMediaDataPlugin.mm; path = "raw-data-api-oc/AgoraMediaDataPlugin.mm"; sourceTree = "<group>"; };
+		2B6C747622A8505D00766B85 /* ModelDataHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ModelDataHandler.swift; path = TensorFlow/ModelDataHandler.swift; sourceTree = "<group>"; };
+		2B6C747822A8518900766B85 /* TfliteWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TfliteWrapper.h; path = TensorFlow/TfliteWrapper.h; sourceTree = "<group>"; };
+		2B6C747922A8518A00766B85 /* TfliteWrapper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = TfliteWrapper.mm; path = TensorFlow/TfliteWrapper.mm; sourceTree = "<group>"; };
+		2B6C747A22A8518A00766B85 /* ObjectDetection-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ObjectDetection-Bridging-Header.h"; path = "TensorFlow/ObjectDetection-Bridging-Header.h"; sourceTree = "<group>"; };
+		2B6C747C22A8524200766B85 /* CVPixelBufferExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CVPixelBufferExtension.swift; path = TensorFlow/CVPixelBufferExtension.swift; sourceTree = "<group>"; };
+		2B6C747E22A8527C00766B85 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIColorExtension.swift; path = TensorFlow/UIColorExtension.swift; sourceTree = "<group>"; };
+		2B6C748122A8553000766B85 /* labelmap.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = labelmap.txt; path = Model/labelmap.txt; sourceTree = "<group>"; };
+		2B6C748222A8553000766B85 /* detect.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; name = detect.tflite; path = Model/detect.tflite; sourceTree = "<group>"; };
+		2B6C748522A85E1F00766B85 /* OverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OverlayView.swift; path = TensorFlow/OverlayView.swift; sourceTree = "<group>"; };
+		2B6C748722A85F0600766B85 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StringExtension.swift; path = TensorFlow/StringExtension.swift; sourceTree = "<group>"; };
 		389D999A218825B200BFD852 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		389D999C218825BE00BFD852 /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
 		389D999E218825C300BFD852 /* libresolv.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.9.tbd; path = usr/lib/libresolv.9.tbd; sourceTree = SDKROOT; };
@@ -66,6 +85,7 @@
 				389D999F218825C300BFD852 /* libresolv.9.tbd in Frameworks */,
 				389D99A3218825DB00BFD852 /* SystemConfiguration.framework in Frameworks */,
 				389D999D218825BE00BFD852 /* VideoToolbox.framework in Frameworks */,
+				B53F0A16B9998F2B5B271E98 /* Pods_Agora_iOS_Tutorial.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +114,8 @@
 		1ABDEE401D383BE4007DE451 /* Agora iOS Tutorial */ = {
 			isa = PBXGroup;
 			children = (
+				2B6C748022A8550500766B85 /* Model */,
+				2B6C747522A8504900766B85 /* TensorFlow */,
 				2B6C746B22A6FC3200766B85 /* raw-data-api-oc */,
 				1ABDEE841D383EB3007DE451 /* Video Chat */,
 				1ABDEE411D383BE4007DE451 /* AppDelegate.swift */,
@@ -126,6 +148,30 @@
 				2B6C746C22A6FC6100766B85 /* AgoraVideoRawData.m */,
 			);
 			name = "raw-data-api-oc";
+			sourceTree = "<group>";
+		};
+		2B6C747522A8504900766B85 /* TensorFlow */ = {
+			isa = PBXGroup;
+			children = (
+				2B6C748722A85F0600766B85 /* StringExtension.swift */,
+				2B6C748522A85E1F00766B85 /* OverlayView.swift */,
+				2B6C747E22A8527C00766B85 /* UIColorExtension.swift */,
+				2B6C747C22A8524200766B85 /* CVPixelBufferExtension.swift */,
+				2B6C747A22A8518A00766B85 /* ObjectDetection-Bridging-Header.h */,
+				2B6C747822A8518900766B85 /* TfliteWrapper.h */,
+				2B6C747922A8518A00766B85 /* TfliteWrapper.mm */,
+				2B6C747622A8505D00766B85 /* ModelDataHandler.swift */,
+			);
+			name = TensorFlow;
+			sourceTree = "<group>";
+		};
+		2B6C748022A8550500766B85 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2B6C748222A8553000766B85 /* detect.tflite */,
+				2B6C748122A8553000766B85 /* labelmap.txt */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		389D9999218825B200BFD852 /* Frameworks */ = {
@@ -219,9 +265,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B6C748322A8553000766B85 /* labelmap.txt in Resources */,
 				1ABDEE4C1D383BE4007DE451 /* LaunchScreen.storyboard in Resources */,
 				1ABDEE491D383BE4007DE451 /* Assets.xcassets in Resources */,
 				1ABDEE471D383BE4007DE451 /* Main.storyboard in Resources */,
+				2B6C748422A8553000766B85 /* detect.tflite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,9 +302,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				1ABDEE441D383BE4007DE451 /* VideoChatViewController.swift in Sources */,
+				2B6C747B22A8518A00766B85 /* TfliteWrapper.mm in Sources */,
+				2B6C747D22A8524200766B85 /* CVPixelBufferExtension.swift in Sources */,
 				1ABDEE421D383BE4007DE451 /* AppDelegate.swift in Sources */,
+				2B6C748622A85E1F00766B85 /* OverlayView.swift in Sources */,
 				2B6C747422A6FC6100766B85 /* AgoraMediaDataPlugin.mm in Sources */,
+				2B6C747722A8505D00766B85 /* ModelDataHandler.swift in Sources */,
 				2B6C747222A6FC6100766B85 /* AgoraVideoRawData.m in Sources */,
+				2B6C748822A85F0700766B85 /* StringExtension.swift in Sources */,
+				2B6C747F22A8527C00766B85 /* UIColorExtension.swift in Sources */,
 				2B6C747322A6FC6100766B85 /* AgoraAudioRawData.m in Sources */,
 				1A2655D51D3F35E700BDBA68 /* AppID.swift in Sources */,
 			);

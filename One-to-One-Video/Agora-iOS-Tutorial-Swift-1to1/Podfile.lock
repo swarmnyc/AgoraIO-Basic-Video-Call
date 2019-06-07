@@ -1,16 +1,20 @@
 PODS:
   - AgoraRtcEngine_iOS (2.4.0.1)
+  - TensorFlowLite (1.13.1)
 
 DEPENDENCIES:
   - AgoraRtcEngine_iOS
+  - TensorFlowLite
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  https://github.com/cocoapods/specs.git:
     - AgoraRtcEngine_iOS
+    - TensorFlowLite
 
 SPEC CHECKSUMS:
   AgoraRtcEngine_iOS: be7eee187e0cf9bc67d67645cd0b75cd60b9503a
+  TensorFlowLite: 8b9dc4eb32eac0f8cb660c66bca7604da56dcc5a
 
-PODFILE CHECKSUM: 81d04021774f9217c91613a2ad38549642ed6fce
+PODFILE CHECKSUM: de3b077a319c6995bdfcf1acf144506aa949f57f
 
-COCOAPODS: 1.5.0
+COCOAPODS: 1.7.1

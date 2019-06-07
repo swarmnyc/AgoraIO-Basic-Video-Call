@@ -5,4 +5,5 @@
 #ifndef Headers_h
 #define Headers_h
 #import "AgoraMediaDataPlugin.h"
+#import "TfliteWrapper.h"
 #endif /* Headers_h */
